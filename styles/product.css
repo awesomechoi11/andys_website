@@ -1,0 +1,29 @@
+/* css for item showing when you click on somethign */
+
+
+:root{
+    --product-height:80vh;
+}
+.product-wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-wrapper > *{
+    height: var(--product-height);
+    
+}
+.product-showcase{
+    width: 650px;
+}
+.product-info{
+    flex-direction: column;
+    display: flex;
+    padding: 0 200px;
+
+}
+.product-info > h1{
+    margin-top:0;
+}

@@ -1,0 +1,76 @@
+<div class="product-wrapper">
+
+    <div class='product-showcase'>
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    {{#each img}}
+                        <li class="splide__slide">
+                            <img src="{{this}}">
+                        </li>
+                    {{/each}}
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class='product-info'>
+        <h1>
+            {{name}}
+        </h1>
+        <span>
+            {{type}}
+        </span>
+        <div class="product-description">
+            <br>
+            <div>
+                LIMITED-EDITION HANDMADE
+            </div>
+            <div>
+                WOVEN FLEECE MATERIAL
+            </div>
+            <br>
+            <div>
+                DELIVERY TIME 2-4 WEEKS
+            </div>
+            <br>
+        </div>
+        
+        <span>
+            {{sizes}}
+            
+        </span>
+        
+        <span>
+            <br>
+            {{price}}
+        </span>
+        
+
+        
+        
+    </div>
+
+</div>
+
+
+<script>
+
+	new Splide( '.splide', {
+		perPage    : 1,
+        perMove: 1,
+        fixedHeight:'80vh',
+        //height: '100%',
+        cover:true,
+        //autoWidth:true,  
+        rewind   : true,
+        padding: {
+            left : '0px',
+            right: '0px',
+	    },
+
+	} ).mount();
+
+</script>

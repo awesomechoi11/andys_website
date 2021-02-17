@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Trash
+    </title>
+
+
+
+    <!--libraries-->
+    <script type="text/javascript" src="node_modules/animejs/lib/anime.min.js"></script>
+    <script type="text/javascript" src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+
+    <!--style libraries-->
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
+
+
+    <!--styles-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/home.css">
+    <link rel="stylesheet" type="text/css" href="/styles/clothes.css">
+    <link rel="stylesheet" type="text/css" href="/styles/product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    {{>navbar}}
+
+    {{{body}}}
+
+
+    {{>footer}}
+
+
+    <script>
+
+        // The debounce function receives our function as a parameter
+        const debounce = (fn) => {
+            // This holds the requestAnimationFrame reference, so we can cancel it if we wish
+            let frame;
+            // The debounce function returns a new function that can receive a variable number of arguments
+            return (...params) => {
+                // If the frame variable has been defined, clear it now, and queue for next frame
+                if (frame) {
+                    cancelAnimationFrame(frame);
+                }
+
+                // Queue our function call for the next frame
+                frame = requestAnimationFrame(() => {
+
+                    // Call our function and pass any params we received
+                    fn(...params);
+                });
+
+            }
+        };
+
+
+        // Reads out the scroll position and stores it in the data attribute
+        // so we can use it in our stylesheets
+        const storeScroll = () => {
+            document.documentElement.dataset.scroll = window.scrollY;
+        }
+
+        // Listen for new scroll events, here we debounce our `storeScroll` function
+        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+
+        // Update scroll position for first time
+        storeScroll();
+    </script>
+</body>
+
+</html>

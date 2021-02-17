@@ -1,0 +1,143 @@
+<div class="carousel">
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/gabe_1.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/jack_1.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/tim_1.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/gabe_2.jpg">
+                </li>
+
+
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/gabe_3.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/gabe_4.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/jack_2.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/tim_2.jpg">
+                </li>
+
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/jackjasmine_1.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/jack_3.jpg">
+                </li>
+                <li class="splide__slide">
+                    <img src="/assets/img/carousel/tim_3.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="catalog-wrapper">
+
+
+    <div class="catalog">
+
+        <div onclick="location.href='/scooby';" class="catalog-item">
+            
+            <div class="catalog-item-overlay item-1">
+                <div class="catalog-overlay-info">
+                    <div class="catalog-info-title">
+                        SCOOBY-DOO
+                    </div>
+                    <div class="catalog-info-type">
+                        HOODIE
+                    </div>
+                    <div class="catalog-info-sizes">
+                        <span class="catalog-size-small">
+                            S
+                        </span>
+                        <span class="catalog-size-medium">
+                            M
+                        </span>
+                        <span class="catalog-size-large">
+                            L
+                        </span>
+                        <span class="catalog-size-xlarge">
+                            XL
+                        </span>
+                    </div>
+                    <div class="catalog-info-price">
+                        150
+                    </div>
+                </div>
+            </div>
+            <img src="/assets/img/catalog/scoobydoo.jpg">
+        </div>
+        <div onclick="location.href='/genie';" class="catalog-item">
+            <div class="catalog-item-overlay item-3">
+                <div class="catalog-overlay-info">
+                    <div class="catalog-info-title">
+                        GENIE
+                    </div>
+                    <div class="catalog-info-type">
+                        HOODIE
+                    </div>
+                    <div class="catalog-info-sizes">
+                        <span class="catalog-size-small">
+                            S
+                        </span>
+                        <span class="catalog-size-medium">
+                            M
+                        </span>
+                        <span class="catalog-size-large">
+                            L
+                        </span>
+                        <span class="catalog-size-xlarge">
+                            XL
+                        </span>
+                    </div>
+                    <div class="catalog-info-price">
+                        150
+                    </div>
+                </div>
+            </div>
+            <img src="/assets/img/catalog/aladin.jpg">
+        </div>
+        <div onclick="location.href='/clothes';" class="catalog-item">
+            <div class="catalog-item-overlay item-2">
+                <div class="catalog-overlay-info">
+                    <div class="catalog-info-title">
+                        VIEW ALL
+                    </div>
+                </div>
+            </div>
+            <img src="/assets/img/catalog/jasmine_1.jpg">
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+
+	new Splide( '.splide', {
+		perPage    : 3,
+        perMove: 1,
+        fixedHeight:'100vh',
+        //height: '100%',
+        cover:true,
+        //autoWidth:true,  
+        rewind   : true,
+        padding: {
+            left : '0px',
+            right: '0px',
+	    },
+
+	} ).mount();
+
+</script>

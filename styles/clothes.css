@@ -1,0 +1,46 @@
+.clothes-menu{
+    padding: 120px 120px 0 120px;
+}
+.clothes-menu-item:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.clothes-display{
+    padding: 0 120px 120px;
+}
+:root{
+    --catalog-padding: 120px;
+    --catalog-item-width:25vw;
+}
+.catalog-wrapper{
+    width: calc( 100% - var(--catalog-padding)*2);
+    height: auto;
+    display: inline-block;
+    padding: var(--catalog-padding);
+}
+.catalog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.catalog-item{
+    width: var(--catalog-item-width);
+    height: calc(var(--catalog-item-width)/0.8);
+    position: relative;
+}
+.catalog-item>img{
+    max-width: 100%;
+}
+.catalog-item-overlay{
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    z-index: 1;
+}
